@@ -3,7 +3,7 @@ mixin sContent()
 	+b.SECTION.sContent.section#sContent&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h1.d-sm-none Перевірка серії паспорту
+				h1.mb-4.d-sm-none Перевірка серії паспорту
 				p
 					strong ВЗЯТИ ДО УВАГИ ДМС
 					| визнано недійсними (анульовані)
@@ -12,7 +12,6 @@ mixin sContent()
 				+e.INPUT.input.form-control.search-inp-js(type='number' placeholder="Номер (тільки цифри)")
 				+e.btn.btn.btn-info.search-btn-js(type="button")
 					img(loading="lazy" src="img/svg/zoom.svg" alt="")
-			//-+input('Номер (тільки цифри)', 'number')(class='search-inp-js mb-2')
 			+e.alert-box.alert-box-js.pt-2
 			+e.info-content.pt-5.info-content-js
 				+e.title БЛАНКИ ПАСПОРТІВ ГРОМАДЯНИНА УКРАЇНИ:
