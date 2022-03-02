@@ -1,29 +1,51 @@
+// start .sContent
+.sContent {
 
-	// start .sContent
-	.sContent {
-		 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-up(xs) {}
-	
-	//
-	@include media-breakpoint-between(md, xl) { }
-	
-	
-	//
-	@include media-breakpoint-only(xs) {}
-	@include media-breakpoint-only(sm) {}
-	@include media-breakpoint-only(md) {}
-	@include media-breakpoint-only(lg) {}
-	@include media-breakpoint-only(xl) {}
-	
-	//
-	@include media-breakpoint-down(xl) {}
-	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
+	.section-title{
+		p{
+			strong{
+				@extend .h2;
+				display: block;
+			}
+		}
+	}
+	&__input{
+		padding: rem(16) rem(24);
+		font-weight: bold;
+	}
+	&__title{
+		@extend .alert;
+		@extend .alert-warning;
+		margin-bottom: rem(40);
+	}
+	&__series-title{
+		color: $gray-800;
+		font-weight: 500;
+		font-size: rem(18);
+		margin-bottom: rem(20);
 
+		strong{
+			color: $black;
+			//font-size: rem(24);
+		}
+	}
+	&__number{
+		padding: rem(3) rem(6);
+		border-radius: rem(4);
+		border: 1px solid $gray-400;
+		background-color: $gray-100;
+
+		&.bg-warning{
+			background-color: rgba($warning, .25) !important;
+		}
+
+	}
+	&__show-default{
+		@extend .btn;
+		@extend .btn-secondary;
+
+		display: block;
+	}
+	&__{}
+	&__{}
 } // end.sContent

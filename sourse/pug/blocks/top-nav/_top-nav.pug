@@ -1,32 +1,25 @@
 mixin menu-toggle()
 	+b.toggle-menu-mobile--js
 		span
+
 mixin mob-mnu()
-	-
-		//- let path = require('path');
-		//- let fs = require('fs');
-		//- var requestURL = 'top-nav.json';
-		//- var request = new XMLHttpRequest();
-		//- request.open('GET', requestURL);
-		//- request.responseType = 'json';
-		//- let dataJson = JSON.parse(json);
-	//- h1= dataJson['lala'] 
 	+b.menu-mobile--js
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
 			+mnu()
 	//  мобильное меню
+
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
-			.row
-				.col-auto.d-lg-none
-					+menu-toggle()
+			.row.align-items-center
 				.col
-					.menu-mobile.menu-mobile--js
-						+menu-toggle()
-						+mnu()
+					+e.logo(href="/")
+						+e.flag
+						+e.hashtag #STOPinfoterror
+				.col-auto.d-none.d-sm-block
+					+e.descr Перевірка серії паспорту
 					
 	// end top-nav

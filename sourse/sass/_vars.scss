@@ -66,7 +66,7 @@ $blue: #0d6efd !default;
 $indigo: #6610f2 !default;
 $purple: #6f42c1 !default;
 $pink: #d63384 !default;
-$red: #dc3545 !default;
+$red: #d23f47;
 $orange: #fd7e14 !default;
 $yellow: #ffc107 !default;
 $green: #198754 !default;
@@ -113,13 +113,13 @@ $theme-colors: (
   "dark": $dark) !default;
 // scss-docs-end theme-colors-map
 
-$theme-colors: map-remove($theme-colors, 
-"info", 
-"light", 
-"dark",  
-"success",
-'warning', 
-);
+//$theme-colors: map-remove($theme-colors,
+//"info",
+//"light",
+//"dark",
+//"success",
+//'warning',
+//);
 
 // scss-docs-start theme-colors-rgb
 $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value") !default;

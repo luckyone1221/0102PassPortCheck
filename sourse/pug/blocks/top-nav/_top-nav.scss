@@ -1,49 +1,49 @@
 .top-nav {
-	// background: svg-load('../svg/check.svg',  stroke=$primary); 
-	// 
-	@include media-breakpoint-up(xl) {
-		background-color: #000;
-		border: 1px solid #000;
+	padding: rem(15) 0;
+	background-color: rgba($info, .05);
+	border-bottom: 1px solid $gray-300;
+	box-shadow: 0 0 10px 0px rgba($black, .25);
+
+	&__logo{
+		display: flex;
+		align-items: center;
 	}
+	&__flag{
+		display: block;
+		width: rem(50);
+		height: rem(30);
+		border-radius: 50%;
+		margin-right: rem(15);
 
-	@include media-breakpoint-up(lg) {
-		background-color: red;
+		position: relative;
+		z-index: 1;
+		&:before,
+		&:after{
+			content: '';
+			position: absolute;
+			left: 0;
+			width: 100%;
+			height: 50%;
+		}
 
+		&:before{
+			top: 0;
+			background-color: #0058b5;
+		}
+		&:after{
+			bottom: 0;
+			background-color: #f7ce00;
+		}
 	}
-	p{
-		@include ell();
+	&__hashtag{
+		color: $black;
+		font-weight: 900;
 	}
-
-	@include media-breakpoint-up(md) {}
-
-	@include media-breakpoint-up(sm) {}
-
-	@include media-breakpoint-up(xs) {}
-
-	// 
-	@include media-breakpoint-between(md, xl) {}
-
-	// 
-	@include media-breakpoint-only(xs) {}
-
-	@include media-breakpoint-only(sm) {}
-
-	@include media-breakpoint-only(md) {}
-
-	@include media-breakpoint-only(lg) {}
-
-	@include media-breakpoint-only(xl) {}
-
-	// 
-	@include media-breakpoint-down(xl) {}
-
-	@include media-breakpoint-down(lg) {}
-
-	@include media-breakpoint-down(md) {}
-
-	@include media-breakpoint-down(sm) {}
-
-	@include media-breakpoint-down(xs) {}
+	&__descr{
+		@extend .h2;
+	}
+	&__{}
+	&__{}
 }
 
 
